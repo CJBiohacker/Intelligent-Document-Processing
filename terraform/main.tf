@@ -65,8 +65,8 @@ resource "aws_iam_role_policy" "lambda_permissions" {
 # 4. Automatic Packaging the Python Code to a ZIP file for Lambda
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/src"
-  output_path = "${path.module}/lambda.zip"
+  source_dir  = "${path.module}/presigned-url-lambda"
+  output_path = "${path.module}/presigned-url-lambda.zip"
 }
 
 # 5. The Lambda Function

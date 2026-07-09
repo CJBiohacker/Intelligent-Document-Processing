@@ -219,8 +219,8 @@ __marimo__/
 
 # Terraform
 terraform/.terraform/
+terraform/*.zip
 .terraform.lock.hcl
 
 # Specific files and folders
-gpg-key-password.txt
 credentials/
