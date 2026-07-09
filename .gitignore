@@ -217,5 +217,10 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+# Terraform
+terraform/.terraform/
+.terraform.lock.hcl
+
 # Specific files and folders
 gpg-key-password.txt
+credentials/
