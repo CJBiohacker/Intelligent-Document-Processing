@@ -220,6 +220,8 @@ __marimo__/
 # Terraform
 terraform/.terraform/
 terraform/*.zip
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
 .terraform.lock.hcl
 
 # Specific files and folders
