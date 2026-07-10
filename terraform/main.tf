@@ -100,9 +100,12 @@ resource "aws_iam_role_policy" "lambda_bedrock_permissions" {
     Version = "2012-10-17"
     Statement = [
       {
-        Action   = ["bedrock:InvokeModel"]
-        Effect   = "Allow"
-        Resource = "arn:aws:bedrock:${var.aws_region}::foundation-model/*"
+        Action = ["bedrock:InvokeModel"]
+        Effect = "Allow"
+        Resource = [
+          "arn:aws:bedrock:*::foundation-model/*",
+          "arn:aws:bedrock:*:*:inference-profile/*"
+        ]
       },
       {
         Action   = ["s3:GetObject"]
