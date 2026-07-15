@@ -87,7 +87,7 @@ def lambda_handler(event, context):
         try:
             ia_json_data = json.loads(ia_text_response)
         except json.JSONDecodeError:
-            logger.error(f"Falha ao decodificar JSON da IA. Retorno original: {ia_text_response}")
+            logger.error(f"Failed to decode AI JSON. Original output: {ia_text_response}")
             ia_json_data = {"error": "Invalid JSON output from LLM", "raw_output": ia_text_response}
 
         logger.info("Processing completed successfully.")
